@@ -40,4 +40,5 @@ INSERT INTO transacciones (cliente_id, fecha, descripcion, monto) VALUES
 (1, CURRENT_DATE - INTERVAL '1 day', 'Pago servicio', 120000.00),
 (2, CURRENT_DATE, 'Transferencia recibida', 500000.00);
 INSERT INTO beneficiarios (nombre, cuenta) VALUES
-('Beneficiario 1', '12345678');
+('Beneficiario 1', '12345678'),
+('Beneficiario 2', '87654321');

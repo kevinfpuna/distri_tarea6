@@ -1,5 +1,6 @@
 package py.una.pol.sd.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,9 @@ public class BeneficiarioService {
         } else {
             throw new RuntimeException("Beneficiario con ID " + id + " no existe");
         }
+    }
+    public boolean existeCuenta(String cuenta) {
+        List<Beneficiario> beneficiarios = repository.findByCuenta(cuenta);
+        return !beneficiarios.isEmpty();
     }
 }
